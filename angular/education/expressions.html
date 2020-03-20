@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+<title>Angular JS</title>
+<style>
+h1,h2,h3,h4,h5,h6,p{text-align:center;}
+input {width:30%; height:30px;}
+input:focus{background-color:tomato;color:white;}
+</style>
+</head>
+
+<body>
+<h1>Our first AngularJS aplication</h1>
+
+<!--Our angularJS application is initialized here -->
+<div ng-app="">
+<h3>Please input your name below</h3>
+<p><input type="text" placeholder="Your name" ng-model="name"></p>
+
+<h3>Your name is:&nbsp;{{name|uppercase}}</h3>
+</div>
+
+<script src="angular.min.js"></script>
+</body>
+</html>
