@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+<title>Angular JS</title>
+<style>
+body{background-color:orange; color:white; font-size:18px;}
+h1,h2,h3,h4,h5,h6,p,span{text-align:center;}
+input {width:30%; height:30px;}
+input:focus{background-color:tomato;color:white;}
+</style>
+<script src="angular.min.js"></script>
+</head>
+
+<body>
+<div ng-app="myFilter" ng-controller="myCTRL">
+<h1>Price of AnglarJS training in Aptech</h1>
+<p>Price in America: {{america | currency}}</p>
+<p>Price in Nigeria: {{nigeria | currency:"NGN "}}</p>
+</div>
+
+<script>
+var myApp=angular.module("myFilter",[]);
+myApp.controller("myCTRL",function($scope){
+$scope.america=4000;
+$scope.nigeria=20000;
+});
+</script>
+</body>
+</html>
