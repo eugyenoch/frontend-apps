@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+<title>Angular JS</title>
+<style>
+body{background-color:orange; color:white; font-size:18px;}
+h1,h2,h3,h4,h5,h6,p,span{text-align:center;}
+input {width:30%; height:30px;}
+input:focus{background-color:tomato;color:white;}
+</style>
+<script src="angular.min.js"></script>
+</head>
+
+<body>
+<h1>AngularJS Repeat Directive</h1>
+
+<div ng-app="" ng-init="fruits=['Banana','Strawberry','Raspberry','Pie','Peach','Pear']">
+<p><input type="text" ng-model="fruit"></p>
+<ul>
+<li ng-repeat="fruit in fruits | filter:fruit">
+{{fruit}}
+</li>
+</ul>
+</div>
+
+
+
+</body>
+</html>
