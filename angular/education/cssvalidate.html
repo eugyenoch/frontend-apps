@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Form CSS validation</title>
+<script src="angular.min.js"></script>
+<style>
+body{font-family:tahoma; background-image:linear-gradient(tomato,brown,indianred)}
+h1{text-align:center; color:yellow;}
+form{position:relative;left:36%;top:25%;}
+input[type=text],input[type=email]{width:25%; height:30px; border:0; border-bottom:1px solid #808080}
+input[type=submit]{background-color:purple;color:white;border-color:purple;}
+input.ng-pristine{background-color:cyan;}
+input.ng-touched.ng-invalid {background-color:red;}
+input.ng-touched.ng-valid{background-color:#808080; color:#fffafa;}
+label{color:#ffffff; font-weight:bold;}
+span{color:#fffafa;}
+</style>
+</head>
+
+<body ng-app>
+<h1>AngularJS Form Validation Using CSS</h1>
+<form name="studentForm" class="student-form" novalidate>
+<label for="firstname">Firstname</label><br />
+<input type="text" name="firstName" id="firstname" ng-model="firstName" ng-required="true" /><br />
+
+<label for="lastname">Lastname</label><br />
+<input type="text" name="lastName" id="lastname" ng-model="lastName" ng-required="true" /><br />
+
+<label for="email">Email</label><br />
+<input type="email" name="email" id="email" ng-model="email" ng-required="false" /> <br />
+
+<label for="address">Address</label><br />
+<input type="text" name="address" id="address" ng-model="address" ng-required="false" /> <br />
+
+<input type="submit" value="Register" name="submit" /> <br />
+<p><strong>Your input is shown below:</strong> <br />
+<span>Firstname:{{firstName}} </span> <br />
+<span>Lastname:{{lastName}} </span> <br />
+<span>Email address:{{email}} </span><br />
+<span>Address:{{address}} </span>
+</p>
+
+
+</form>
+</body>
+</html>
