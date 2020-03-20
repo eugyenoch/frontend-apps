@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+<title>Angular JS</title>
+<style>
+h1,h2,h3,h4,h5,h6,p,span{text-align:center;}
+input {width:30%; height:30px;}
+input:focus{background-color:tomato;color:white;}
+</style>
+<script src="angular.min.js"></script>
+</head>
+
+<body>
+<div ng-app="myOwn" ng-controller="myController">
+<h1>Introducing modules and controllers</h1>
+<p><input type="text" ng-model="firstname"></p>
+<p><input type="text" ng-model="lastname"></p>
+
+<p>The full name is: {{firstname + " " +lastname}}</p>
+</div>
+
+<script>
+var ourAPP=angular.module("myOwn",[]);
+ourAPP.controller("myController",function($scope){
+$scope.firstname="john";
+$scope.lastname="okon";
+});
+</script>
+
+</body>
+</html>
