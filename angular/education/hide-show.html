@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+<title>Angular JS</title>
+<style>
+body{background-color:orange; color:white; font-size:18px;}
+h1,h2,h3,h4,h5,h6,p,span{text-align:center;}
+input {width:30%; height:30px;}
+input:focus{background-color:tomato;color:white;}
+</style>
+<script src="angular.min.js"></script>
+</head>
+
+<div ng-app="">
+<p><strong>Check to hide/reveal fruits</strong><br>
+<input type="checkbox" ng-model="myFruits"></p>
+<ul ng-hide="myFruits">
+<li>Banana</li>
+<li>Strawberry</li>
+<li>Raspberry</li>
+<li>Peach</li>
+<li>Pear</li>
+</ul>
+</div>
+
+</body>
+</html>
