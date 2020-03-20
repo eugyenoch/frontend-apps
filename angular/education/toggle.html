@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>ANgularJS | Toggle</title>
+<script src="angular.min.js"></script>
+</head>
+
+<body>
+	<div ng-app="myApp" ng-controller="myCtrl">
+		<button ng-click="myFunction()">Click</button>
+		<div ng-show ="listMe">
+			<h1>List item</h1>
+			<div>Number one</div>
+			<div>Number two</div>
+			<div>Number three</div>
+		</div>
+	</div>
+	<script>
+		var app=angular.module('myApp',[]);
+		app.controller('myCtrl',function($scope){
+			$scope.listMe = false;
+			$scope.myFunction=function(){
+				$scope.listMe=!$scope.listMe;
+			}
+		});
+	</script>
+</body>
+</html>
