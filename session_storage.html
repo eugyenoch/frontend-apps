@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Session Storage</title>
+	<link rel="stylesheet" type="text/css" href="css/table2.css">
+	<link rel="stylesheet" type="text/css" href="css/button.css">
+</head>
+<body onload="checkSupport();">
+	<h1>Session Storage</h1>
+	<table>
+		<tr>
+			<th>Name of Item</th><th>Price</th><th>Quantity</th><th>Color</th><th>Date Imported</th><th>Quantity Sold</th><th>Quantity remaining</th>
+		</tr>
+		<tr>
+			<td id="ss"></td>
+			<td id="sp"></td>
+			<td id="so"></td>
+			<td id="sc"></td>
+			<td id="sd"></td>
+			<td id="sq"></td>
+			<td id="sr"></td>
+		</tr>
+	</table>
+
+	<button onclick="saveItems();" class="default cool btn-hover">SAVE</button>&nbsp;&nbsp;<button onclick="removeItems();" class="default danger btn-hover">DELETE</button>
+
+	<script type="text/javascript">
+ function saveItems(){
+		sessionStorage.setItem("Name","Electric Fan");
+		sessionStorage.setItem("Price","N15000");
+		 sessionStorage.setItem("Quantity",20);
+		 sessionStorage.setItem("Color","Black and White");
+		 sessionStorage.setItem("Date","15-Aug-2020");
+		 sessionStorage.setItem("Sold",5);
+		 sessionStorage.setItem("Remaining",15);
+
+		
+		 document.getElementById('ss').innerHTML=sessionStorage.getItem('Name');
+		 document.getElementById('sp').innerHTML=sessionStorage.getItem('Price');
+		 document.getElementById('so').innerHTML=sessionStorage.getItem('Quantity');
+		 document.getElementById('sc').innerHTML=sessionStorage.getItem('Color');
+		 document.getElementById('sd').innerHTML=sessionStorage.getItem('Date');
+		 document.getElementById('sq').innerHTML=sessionStorage.getItem('Sold');
+		 document.getElementById('sr').innerHTML=sessionStorage.getItem('Remaining');
+
+		 }
+
+		 function removeItems(){sessionStorage.clear();}		
+
+		
+	</script>
+
+	<script>
+		function checkSupport(){
+		if(('sessionStorage' in window) && window['sessionStorage']!==null){
+			alert("Your browser supports session storage");
+		}
+		else{
+			alert("Your browser does not support session storage");
+		}
+		}
+	</script>
+</body>
+</html>
