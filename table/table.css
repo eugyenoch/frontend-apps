@@ -1,0 +1,21 @@
+body{
+	font-family:tahoma,verbuna;
+	background-image:url('../img/slider-image-3.jpg');
+}
+
+
+table{
+	width:100%;
+	border-collapse:collapse;
+	caption-side:bottom;
+	text-align:center;
+	vertical-align:top;
+}
+
+td{
+	vertical-align:center;
+}
+
+tr:hover{
+	background-color:lightgrey;
+}
