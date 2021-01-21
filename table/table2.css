@@ -1,0 +1,25 @@
+body{
+	font-family:tahoma,verbuna;
+}
+
+table{
+	width:100%;
+	text-align:center;
+	border-collapse:separate;
+	border-spacing:15px;
+}
+
+table,td,th{
+	border:1px solid grey;
+}
+
+tr:nth-child(even){
+	background-color:lightgrey;
+}
+
+/*td:nth-child(even){
+	background-color:lightgrey;
+}*/
+/*tr{
+	background-color:;
+}*/
