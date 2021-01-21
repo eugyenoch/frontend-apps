@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Drop down menu</title>
+<link rel="stylesheet" type="text/css" href="css/dropdown.css">
+</head>
+
+<body>
+
+	<nav class="menu-bar">
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+
+		<li><a href="#">Services</a>
+			<nav class="sub-menu">
+				<ul>
+					<li>Web development</li>
+					<li>Mobile App</li>
+					<li>IT education</li>
+				</ul>
+			</nav>
+		</li>
+		<li><a href="#">Products</a>
+			<nav class="sub-menu">
+				<ul>
+					<li>Electronic Gadget</li>
+					<li>Mobile phones</li>
+					<li>Satellite Equipment</li>
+				</ul>
+			</nav>
+		</li>
+		<li><a href="#">Contact us</a></li>
+		<li><a href="#">Vision</a></li>
+		<li><a href="#">Mission</a></li>
+	</ul>
+</nav>
+<h1>DROPDOWN MENU TUTORIAL</h1>
+<h3 id="welcome"></h3>
+
+<script>
+	var grammar = "welcome to this tutorial on dropdown menus, What is your name?";
+	var grammar2 = "We love you";
+
+	var num1 = 18;
+	var num2 = 20;
+	var num3 = num1 + num2;
+
+
+	//parseInt() - used to convert from string to integer
+	//parseFloat() - used to convert from string to float
+
+	alert("The addition of 18 and 20 is " + num3);
+	
+	/*var o = true;
+	var ps5= null;
+	*/
+	// Create an alert box
+	//alert("Welcome to this tutorial page on dropdown menus");
+
+	//Create a confirm box
+	//confirm("welcome to this tutorial on dropdown menus, Would you love to proceed?");
+
+	// Create a prompt box
+	//prompt(grammar + grammar2);
+
+	//The document.write() function
+	//document.write(grammar);
+
+	//The console method
+	console.log(grammar);
+
+	//The getElementById method
+	document.getElementById("welcome").innerHTML = grammar + " " + grammar2;
+</script>
+</body>
+</html>
