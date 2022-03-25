@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introducing Scopes | AngularJS</title>
+        <script src="angular-1.8.2/angular.min.js"></script>
+        <style>
+            body{background-color:indianred;}
+        </style>
+    </head>
+
+    <body>
+        <h1>AngularJS filters</h1>
+        <h3>AngularJS filters are used to manipulate the appearance of information and outputs</h3>
+        <!-- <div data-ng-app>
+            <input type="text" data-ng-model="firstname" placeholder="Enter Firstname">
+            <h2>The Firstname is <span data-ng-bind="firstname"></span></h2> 
+            <h2>{{ firstname | lowercase }}</h2>            
+        </div> -->
+        <!-- <div data-ng-app="myApp" data-ng-controller="myCtrl">
+            <input type="text" data-ng-model="searcher"><br>
+            <ul>
+                <li data-ng-repeat="place in countries | filter:searcher">{{ place }}</li>
+            </ul>
+        </div> -->
+        <script>
+            // var app = angular.module('myApp',[]);
+            // app.controller('myCtrl',function($scope){
+            //     $scope.countries = [
+            //         'Brazil',
+            //         'Nigeria',
+            //         'Niger',
+            //         'Russia',
+            //         'South Africa',
+            //         'Japan',
+            //         'Malaysia'
+            //     ];
+            // });
+        </script>
+
+        <div data-ng-app="myApp" data-ng-controller="myCtrl">
+            <h2>The price for the item is </h2>
+            <h3>{{Price | currency }}</h3>
+
+            <h2>The price for the item in euros is </h2>
+            <h3>{{ePrice | currency:'&euro;':4}}</h3>
+        </div>
+
+        <script>
+            var app = angular.module('myApp',[]);
+            app.controller('myCtrl',function($scope){
+                $scope.Price = 300;
+                $scope.ePrice = 200;
+            });
+        </script>
+    </body>
+    </html>
