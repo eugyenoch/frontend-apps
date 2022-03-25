@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Other Directives | AngularJS</title>
+        <script src="angular-1.8.2/angular.min.js"></script>
+        <style>
+            body{background-color:indianred;}
+        </style>
+    </head>
+
+    <body>
+        <div data-ng-app="" data-ng-init="checked=true">
+            <input type="checkbox" data-ng:model="checked">Check me <br>
+
+          <input type="text" data-ng-if="checked" placeholder="check me"><br>
+         READONLY:   <input type="text" data-ng-readonly="checked" placeholder="You can only readme">
+            <br>
+         DISABLED:   <input type="text" data-ng-disabled="checked" placeholder="I am disabled">
+        </div>
+    </body>
+    </html>

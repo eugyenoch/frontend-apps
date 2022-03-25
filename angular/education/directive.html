@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AngularJS Directives</title>
+        <script src="angular-1.8.2/angular.min.js"></script>
+        <style>
+            body{background-color:indianred;}
+            input{
+                height:30px;}
+            /* h2{position:absolute; top:55%; left:50%; transform:translateX(-90%);}           */
+        </style>
+    </head>
+
+    <body>
+        <h1>AngularJS directive</h1>
+
+        <div data-ng-app="">
+            <!-- <label>fullname:</label>  -->
+            <input data-ng-model="firstname" placeholder="Enter your fullname" type="text">
+            <input data-ng-model="lastname" placeholder="Enter your fullname" type="text">
+            <h2>Fullname: {{firstname + " " + lastname}}</h2>
+        </div>
+    </body>
+    </html>
