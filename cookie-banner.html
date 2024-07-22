@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xTradeSecurity Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+        }
+        .cookie-banner p {
+            margin: 0;
+        }
+        .cookie-banner button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cookie Policy Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies to ensure you get the best experience on our website. <a href="/cookie-policy.html" style="color: #00f;">Learn more</a></p>
+        <button onclick="closeCookieBanner()">Got it!</button>
+    </div>
+
+    <script>
+        function closeCookieBanner() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            document.cookie = "cookieConsent=true; path=/; max-age=" + (60*60*24*365);
+        }
+
+        function checkCookieConsent() {
+            const cookies = document.cookie.split(';');
+            for(let cookie of cookies) {
+                if(cookie.trim().startsWith("cookieConsent=")) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        window.onload = function() {
+            if (!checkCookieConsent()) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+                setTimeout(() => {
+                    document.getElementById('cookie-banner').style.display = 'none';
+                }, 300000); // 5 minutes
+            } else {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
