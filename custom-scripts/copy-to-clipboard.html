@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Text to Clipboard</title>
+</head>
+<body>
+    <h2>Copy Text from Input Field</h2>
+    
+    <label for="inputText">Text to Copy:</label>
+    <input type="text" id="inputText" value="This is the text to copy"><br><br>
+    
+    <button id="copyButton">Copy Text</button>
+    
+    <script>
+        document.getElementById("copyButton").addEventListener("click", function() {
+            // Get the text field
+            var copyText = document.getElementById("inputText").value;
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText).then(function() {
+                // Alert the copied text (Optional)
+                alert("Copied the text: " + copyText);
+            }).catch(function(error) {
+                console.error('Error copying text: ', error);
+            });
+        });
+    </script>
+</body>
+</html>
